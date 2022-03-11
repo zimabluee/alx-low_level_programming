@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - block
+ *main - entry point
  *
- * Description - print alphabet 'a' to 'z'
+ *Description:prints the alphabet
  *
- * Return value always zero
+ *Return: Always 0 (successful)
  */
 int main(void)
 {
