@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - main block
- * description - prints all alphabet except e and q
+ *main - entry point
  *
- * Return - zero
+ *Description: prints whole alphabet in lowercase except q and c
+ *
+ *Return: Always zero(successful)
+ *
  */
 int main(void)
 {
