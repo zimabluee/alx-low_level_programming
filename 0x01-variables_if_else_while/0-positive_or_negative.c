@@ -2,11 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - main block
- * Description - get random number, print the number
- * check if number is positive, negative or zero
+ *main - entry point
  *
- * Return is zero
+ *Description: tests whether a random number is negative or positive
+ *
+ *Return: Always zero (successful)
  */
 int main(void)
 {
