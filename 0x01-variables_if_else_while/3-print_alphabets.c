@@ -7,7 +7,6 @@
  *Description: prints the alphabet in uppercase and lowercase
  */
 int main(void)
-int main(void)
 {
 	char c = 'a';
 
