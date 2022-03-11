@@ -2,10 +2,11 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- * main - block
- * Description: generate a random number, get its last digit and compare it
- * with five
- * Return is zero
+ *main - entry point
+ *
+ *Description: tests whether a random number is negative or positive
+ *
+ *Return: Always zero (successful)
  */
 int main(void)
 {
