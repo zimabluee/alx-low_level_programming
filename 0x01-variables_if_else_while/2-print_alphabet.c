@@ -2,7 +2,10 @@
 #include <stdlib.h>
 /**
  * main - block
+ *
  * Description - print alphabet 'a' to 'z'
+ *
+ * Return value always zero
  */
 int main(void)
 {
