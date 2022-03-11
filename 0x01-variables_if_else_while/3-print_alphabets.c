@@ -7,6 +7,7 @@
  *Description: prints the alphabet in uppercase and lowercase
  */
 int main(void)
+int main(void)
 {
 	char c = 'a';
 
@@ -14,10 +15,10 @@ int main(void)
 	{
 		putchar(c);
 		c++;
-        }
+	}
 
-	c = 'A'
-	
+	c = 'A';
+
 	while (c <= 'Z')
 	{
 		putchar(c);
