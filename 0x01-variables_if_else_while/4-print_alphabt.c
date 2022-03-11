@@ -3,11 +3,12 @@
 /**
  * main - main block
  * description - prints all alphabet except e and q
- * return - zero
+ *
+ * Return - zero
  */
 int main(void)
 {
-	char c ='a';
+	char c = 'a';
 
 	while (c <='z')
 	{
