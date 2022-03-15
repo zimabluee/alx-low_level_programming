@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  *jack_bauer - all minutes in a day
  *
