@@ -1,33 +1,30 @@
 #include "main.h"
 /**
- *print_triangle - prints a triangle according to size
+ *more_numbers - from 0-14 x10
  *
- *@size:input
+ *Description:0-14 x10
  *
- *Return: void
+ *Return:void
  *
  */
-void print_triangle(int size)
+void more_numbers(void)
 {
-	int i, j, gap;
+	int i, j;
 
-	if (size <= 0)
+	i = 0;
+
+	while (i < 10)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (i = 1; i <= size; i++)
+		j = 0;
+
+		while (j < 15)
 		{
-			for (gap = 1; gap <= (size - i); gap++)
-			{
-				_putchar(' ');
-			}
-			for (j = 1; j <= i; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			if (j >= 10)
+				_putchar('0' + (j / 10));
+				_putchar('0' + (j % 10));
+				j++;
 		}
+		_putchar('\n');
+		i++;
 	}
 }
