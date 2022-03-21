@@ -20,7 +20,7 @@ half = length / 2;
 while (half--)
 {
 	temp = s[length - i - 1];
-	s[len - i - 1] = s[i];
+	s[length - i - 1] = s[i];
 	s[i] = temp;
 	i++;
 }
