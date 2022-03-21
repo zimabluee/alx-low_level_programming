@@ -1,6 +1,6 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * swap_int - swap variable values
+ * swap_int - swap variable values, 'c' is used for temporary storage
  * @a: pointer 1
  * @b: pointer 2
  * Return: void
