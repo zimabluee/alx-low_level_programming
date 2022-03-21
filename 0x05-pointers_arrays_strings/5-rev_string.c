@@ -1,20 +1,15 @@
 #include "main.h"
 /**
  * rev_string - reverses a string
- * @s: holi
+ * @s: My School
  */
 void rev_string(char *s)
 {
-	int i;
-	int j;
-	int temp;
-	int length;
+	int i, j, temp, length;
 
-	while (s[i] != 0)
-	{
-		i++;
-	}
-
+	for (len = 0; s[len] != '\0'; len++)
+		;
+	
 	length = i;
 	i = 0;
 	j = length - 1;
