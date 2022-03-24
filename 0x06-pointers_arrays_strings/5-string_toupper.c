@@ -5,16 +5,14 @@
  *
  * Return: the string that change for uppercase
  */
-char *string_toupper(char *s)
-{
-	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-		{
-			s[i] -= 32;
-		}
-	}
-	return (s);
+char *string_toupper(char *str)
+{
+int i;
+for (i = 0; str[i] != '\0'; i++)
+{
+	if (str[i] <= 'z' && str[i] >= 'a')
+		str[i] -= 32;
+}
+return (str);
 }
