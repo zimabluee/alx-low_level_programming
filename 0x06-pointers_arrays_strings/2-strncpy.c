@@ -1,5 +1,5 @@
 #include main.h
-**
+/**
  * _strncpy - copy the string
  * @dest: array that returns
  * @src: the pointer that receive the string
