@@ -6,7 +6,7 @@
  *
  * Return: the number found
  */
-int square_root(int i, int j)
+int _sqrt(int i, int j)
 {
 	if (i * i == j)
 	{
@@ -18,7 +18,7 @@ int square_root(int i, int j)
 	}
 	else
 	{
-		return (square_root(i + 1, j));
+		return (_sqrt(i + 1, j));
 	}
 }
 /**
@@ -28,7 +28,5 @@ int square_root(int i, int j)
  */
 int _sqrt_recursion(int n)
 {
-	int a = 1;
-
-	return (square_root(a, n));
+	return (_sqrt(1, n));
 }
