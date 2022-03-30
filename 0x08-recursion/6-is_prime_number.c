@@ -6,7 +6,7 @@
  *Return:1 - prime ,0 - otherwise
  *
  */
-int prime_check( int i, int j)
+int prime_check(int i, int j)
 {
 	if (j < 2 || j % i == 0)
 	{
@@ -16,7 +16,7 @@ int prime_check( int i, int j)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (prime_check( i + 1, j));
 	}
