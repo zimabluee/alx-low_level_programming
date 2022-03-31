@@ -18,7 +18,7 @@ int prime_check(int i, int j)
 	}
 	else
 	{
-		return (prime_check( i + 1, j));
+		return (prime_check(i + 1, j));
 	}
 }
 /**
