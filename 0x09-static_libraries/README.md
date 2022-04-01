@@ -1,1 +1,1 @@
-Added tasks for 0x09-static_libraries
+Added 0x07 tasks
