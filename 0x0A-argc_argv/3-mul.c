@@ -1,24 +1,28 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
- *main - print the result of the multiplication, followed by a new line
+ *main - multiplies two numbers
  *
  *@argc:arguement count
- *@argv:arguement array
- *Return:0
+ *@argv:arguement vector
+ *Return:0(success)
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 1 || argc == 2)
+	int product = 0;
+	int x, y;
+
+	if (argc == 3)
 	{
-		printf ("Error");
-		return(0);
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+		product = x * y;
+		printf("%d\n", product);
+		return (0);
 	}
-	int i, j = 0;
-	for (i = 1; i < argc; i++)
+	else
 	{
-		j = atoi(argv[i]) * atoi(argv[i+1]);
-		printf("%d\n", j);
+		printf("Error\n");
+		return (1);
 	}
-	return (0);
 }
