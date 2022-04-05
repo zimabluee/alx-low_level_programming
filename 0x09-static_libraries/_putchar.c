@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-int _atoi(char *s)
+int _putchar(char c)
 {
-	return (s);
+	return (c);
 }
