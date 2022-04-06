@@ -1,24 +1,33 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * _strcmp - compares two strings
- * @s1: input parameter
- * @s2: input parameter
+ *_strspn - gets the length of a prefix substring
  *
- * Return: 0 if equal or i if is different
+ *@s:string
+ *@accept:bytes
+ *
+ *Return:unsigned int
+ *
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
+	unsigned int i = 0;
+	char *t = accept;
+
+	while (*s++)
 	{
-		s1++;
-		s2++;
+		while (*accept++)
+		{
+			if (*(s - 1) == *(accept - 1))
+			{
+				i++;
+				break;
+			}
+		}
+		if (!(*--accept))
+		{
+			break;
+		}
+		accept = t;
 	}
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
-	else
-	{
-		return (*s1 - *s2);
-	}
+	return (i);
 }
