@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include "holberton.h"
 /**
  *alloc_grid - returns a pointer to a 2 dimensional array of characters
  *@width:w
