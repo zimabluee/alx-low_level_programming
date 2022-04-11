@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *free_dog - frees the memory occupied by dog_t type
+ *free_dog - free the memory occupied by dog_t
  *@d:struct to free
  *Return:void
  */

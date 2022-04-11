@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *new_dog - creates a new dog of type dog_t
- *@name:name
- *@age:age
- *@owner:owner
+ *new_dog - creates a new type dog_t
+ *@name:name of the dog
+ *@age:age of the dog
+ *@owner:owner of the dog
  *Return:pointer to a new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
