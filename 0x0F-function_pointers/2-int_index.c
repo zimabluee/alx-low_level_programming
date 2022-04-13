@@ -4,7 +4,7 @@
  *int_index - searches for an int
  *
  *@array:array
- *@size:no. of elements of array
+ *@size:number of elements of array
  *@cmp:function to call to compare the two numbers
  *Return:int
  */
