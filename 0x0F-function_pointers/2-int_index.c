@@ -1,21 +1,32 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
- *array_iterator - executes a function given as a parameter
- *on each element of an array
- *@array:to iterate
- *@size:size of array
- *@action:function param
+ *int_index - searches for an int
+ *
+ *@array:array
+ *@size:no. of elements of array
+ *@cmp:function to call to compare the two numbers
+ *Return:int
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	int i = 0;
+	int result = 0;
 
-	if (array && action)
+	if (size <= 0)
+	{
+		return (-1);
+	}
+	if (cmp && size && array)
 	{
 		for (i = 0; i < size; i++)
 		{
-			(*action)(array[i]);
+			result = cmp(array[i]);
+			if (result == 1)
+			{
+				return (i);
+			}
 		}
 	}
+	return (-1);
 }
