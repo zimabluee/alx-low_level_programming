@@ -1,17 +1,21 @@
-int int_index(int *array, int size, int (*cmp)(int))
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ *array_iterator - executes a function given as a parameter
+ *on each element of an array
+ *@array:to iterate
+ *@size:size of array
+ *@action:function param
+ */
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i = 0;
-	if (size <= 0)
+	unsigned int i;
+
+	if (array && action)
 	{
-		return (-1);
-	}
-	for (i = 0; i <= size; i++)
-	{
-		if ((*cmp)(array[i]) != 0)
+		for (i = 0; i < size; i++)
 		{
-			return (i);
-			break;
+			(*action)(array[i]);
 		}
 	}
-	return (-1);
 }
