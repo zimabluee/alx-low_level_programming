@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *print_name - calls another function to peint a name
- *
+ *print_name - function that prints a name
  *@name:name to print
  *@f:function name
  *
