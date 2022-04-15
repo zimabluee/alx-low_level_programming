@@ -1,7 +1,7 @@
+#include "variadic-functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include "variadic-functions.h"
 /**
  *print_strings - prints strings passed to it
  *@separator: printed between the strings
