@@ -3,44 +3,51 @@
 #include <stdarg.h>
 /**
  *print_all - prints any type of character
- *@format: type of argument
- *Return: void
+ *
+ *@format:format
+ *
+ *Return:void
  */
-void print_all (const char *const format, ...)
+void print_all(const char * const format, ...)
 {
-	va_list ap;
-	char *s;
 	int i = 0;
-	va_start(ap, format);
-	while (format && format[i])
+	char *str, *sprtr = "";
+
+	va_list va;
+
+	va_start(va, format);
+
+	if (format)
 	{
-		switch (format[i++])
+		while (format[i] != '\0')
 		{
-		case 'c':
-			printf("%c", va_arg(ap, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(ap, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(ap, double));
-			break;
-		case 's':
-			s = va_arg(ap, char *);
-			if (s == NULL)
+			switch (format[i])
 			{
-				printf("(nil)");
+			case 'c':
+				printf("%s%c", sprtr, va_arg(va, int));
+				break;
+			case 'i':
+				printf("%s%d", sprtr, va_arg(va, int));
+				break;
+			case 'f':
+				printf("%s%f", sprtr, va_arg(va, double));
+				break;
+			case 's':
+				str = va_arg(va, char *);
+				if (str == NULL)
+				{
+					str = "(nil)";
+				}
+				printf("%s%s", sprtr, str);
+				break;
+			default:
+				i++;
+				continue;
 			}
-			printf("%s", s);
-			break;
-		default:
-			continue;
-	    }
-		if (format[i])
-		{
-			printf (", ");
+			sprtr = ", ";
+			i++;
 		}
 	}
-    printf("\n");
-    va_end(ap);
+	printf("\n");
+	va_end(va);
 }
