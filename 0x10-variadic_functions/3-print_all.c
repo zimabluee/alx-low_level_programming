@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- *print_all - prints any type of character
- *@format: type of argument
- *Return: void
+ * print_all - prints anything.
+ * @format: types of arguments passed to the function.
+ * Return: nothing.
  */
 void print_all (const char *const format, ...)
 {
