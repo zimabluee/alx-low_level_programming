@@ -1,46 +1,45 @@
-#include <stdlib.h>
+#include "lists.h"
 #include <string.h>
 #include <stdio.h>
-#include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * add_node_end - add a node at the end of a linked list
+ * @head: The character to print
+ * @str: string for the new node
  *
- * Return: Always 0.
+ * Return: new node
  */
-int main(void)
+list_t *add_node_end(list_t **head, const char *str)
 {
-    list_t *head;
+	list_t *current;
+	list_t *new_node;
+	int c;
 
-    head = NULL;
-    add_node_end(&head, "Anne");
-    add_node_end(&head, "Colton");
-    add_node_end(&head, "Corbin");
-    add_node_end(&head, "Daniel");
-    add_node_end(&head, "Danton");
-    add_node_end(&head, "David");
-    add_node_end(&head, "Gary");
-    add_node_end(&head, "Holden");
-    add_node_end(&head, "Ian");
-    add_node_end(&head, "Ian");
-    add_node_end(&head, "Jay");
-    add_node_end(&head, "Jennie");
-    add_node_end(&head, "Jimmy");
-    add_node_end(&head, "Justin");
-    add_node_end(&head, "Kalson");
-    add_node_end(&head, "Kina");
-    add_node_end(&head, "Matthew");
-    add_node_end(&head, "Max");
-    add_node_end(&head, "Michael");
-    add_node_end(&head, "Ntuj");
-    add_node_end(&head, "Philip");
-    add_node_end(&head, "Richard");
-    add_node_end(&head, "Samantha");
-    add_node_end(&head, "Stuart");
-    add_node_end(&head, "Swati");
-    add_node_end(&head, "Timothy");
-    add_node_end(&head, "Victor");
-    add_node_end(&head, "Walton");
-    print_list(head);
-    return (0);
+	current = *head;
+	while (current && current->next != NULL)
+		current = current->next;
+
+	for (c = 0; str[c] != '\0'; c++)
+		;
+
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	new_node->len = c;
+	new_node->next = NULL;
+
+	if (current)
+		current->next = new_node;
+	else
+		*head = new_node;
+	return (new_node);
 }
