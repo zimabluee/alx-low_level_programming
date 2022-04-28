@@ -9,18 +9,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, dec = 0;
-
-	if (b == NULL)
-		return (0);
-	while (b[i])
+	unsigned int decimal, reminder, weight;
+	weight = 1;
+	decimal = 0;
+	if (b = NULL)
 	{
-		if (!(b[i] == '0' || b[i] == '1'))
-			return (0);
-		dec <<= 1;
-		if (b[i] == '1')
-			dec += 1;
-		i++;
+		return (0);
 	}
-	return (dec);
+	while(b != 0)
+	{
+		reminder = b % 10;
+		decimal = decimal + reminder * weight;
+		b = b / 10;
+		weight = weight * 2;
+	}
+	return (decimal);
 }
